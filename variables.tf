@@ -1,6 +1,6 @@
 variable "pet_prefix" {
-    type        = string
-    description = "String to prefix random_pet name with."
+  type        = string
+  description = "String to prefix random_pet name with."
 }
 
 variable "pet_count" {
