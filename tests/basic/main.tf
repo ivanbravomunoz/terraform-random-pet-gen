@@ -1,6 +1,5 @@
 module "pet-gen" {
-  source  = "app.terraform.io/abasista-tfc/pet-gen/random"
-  version = "0.2.0"
+  source = "../.."
 
   pet_prefix = "test-basic"
 }

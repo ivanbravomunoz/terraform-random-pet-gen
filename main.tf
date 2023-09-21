@@ -6,14 +6,14 @@ resource "random_pet" "pet_1" {
   separator = "-"
 }
 
-# resource "random_pet" "pet_2" {
-#   count = var.pet_count
+resource "random_pet" "pet_2" {
+  count = var.pet_count
 
-#   length    = var.pet_length
-#   prefix    = var.pet_prefix
-#   separator = "-"
+  length    = var.pet_length
+  prefix    = var.pet_prefix
+  separator = "-"
 
-#   keepers = {
-#     always = timestamp()
-#   }
-# }
+  keepers = {
+    always = timestamp()
+  }
+}
