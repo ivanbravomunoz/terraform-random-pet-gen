@@ -1,18 +1,12 @@
-module "pet" {
-  source  = "app.terraform.io/abasista-tfc/pet-gen/random"
-  version = "0.3.0"
-  count   = 3
-
-  pet_prefix = "count-example"
-}
-
 data "tfe_outputs" "fetch" {
   organization = "abasista-tfc"
   workspace    = "pet-gen-ex-main" 
 }
 
-resource "null_resource" "echo" {
-  provisioner "local-exec" {
-    command = "echo ${data.tfe_outputs.fetch.values.pet_1}"
-  }
+module "pet" {
+  source  = "app.terraform.io/abasista-tfc/pet-gen/random"
+  version = "0.4.0"
+  count   = 3
+
+  pet_prefix = data.tfe_outputs.fetch.values.pet_1_name_1
 }
