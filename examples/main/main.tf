@@ -4,3 +4,7 @@ module "pet" {
 
   pet_prefix = "main-example"
 }
+
+output "pet_1" {
+  value = module.pet.pet_name_1
+}
