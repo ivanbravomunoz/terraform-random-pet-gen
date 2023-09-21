@@ -10,3 +10,7 @@ module "pet" {
 
   pet_prefix = data.tfe_outputs.fetch.values.pet_1_name_1
 }
+
+output "demo" {
+  value = module.pet.pet_1_name_1
+}
