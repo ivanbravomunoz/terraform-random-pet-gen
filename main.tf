@@ -17,3 +17,11 @@ resource "random_pet" "pet_2" {
     always = timestamp()
   }
 }
+
+resource "random_pet" "pet_3" {
+  count = var.pet_count
+
+  length    = var.pet_length
+  prefix    = var.pet_prefix
+  separator = "_"
+}
