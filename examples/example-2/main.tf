@@ -1,6 +1,6 @@
 data "tfe_outputs" "fetch" {
   organization = "abasista-tfc"
-  workspace    = "pet-gen-ex-main" 
+  workspace    = "pet-gen-example-1" 
 }
 
 module "pet" {
