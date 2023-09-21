@@ -5,3 +5,14 @@ module "pet" {
 
   pet_prefix = "count-example"
 }
+
+data "tfe_outputs" "fetch" {
+  organization = "abasista-tfc"
+  workspace    = "pet-gen-ex-main" 
+}
+
+resource "null_resource" "echo" {
+  provisioner "local-exec" {
+    command = "echo ${data.tfe_outputs.fetch.values.pet_1}"
+  }
+}
