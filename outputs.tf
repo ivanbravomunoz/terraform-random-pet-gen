@@ -13,3 +13,8 @@ output "pet_name_3" {
 output "pet_1_name_1" {
   value = try(random_pet.pet_1[0].id)
 }
+
+output "pet_1_name_1_sensitive" {
+  value     = try(random_pet.pet_1[0].id)
+  sensitive = true
+}
