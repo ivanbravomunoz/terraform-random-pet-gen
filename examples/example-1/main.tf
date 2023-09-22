@@ -13,3 +13,7 @@ output "pet_1_name_1_sensitive" {
   value     = module.pet.pet_1_name_1_sensitive
   sensitive = true
 }
+
+output "pet_3" {
+  value = module.pet.random_pet.pet_3[0].id
+}
