@@ -10,5 +10,6 @@ output "pet_1_name_1" {
 }
 
 output "pet_1_name_1_sensitive" {
-  value = module.pet.pet_1_name_1_sensitive
+  value     = module.pet.pet_1_name_1_sensitive
+  sensitive = true
 }
