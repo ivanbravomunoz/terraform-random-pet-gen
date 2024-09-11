@@ -7,3 +7,13 @@ resource "random_pet" "pet_1" {
     always = timestamp()
   }
 }
+
+resource "random_pet" "pet_2" {
+  length    = var.pet_length
+  prefix    = var.pet_prefix
+  separator = "-"
+
+  keepers = {
+    always = timestamp()
+  }
+}
